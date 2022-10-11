@@ -1,0 +1,21 @@
+﻿<Window x:Class="InstanceManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InstanceManager"
+        mc:Ignorable="d"
+        Title="Instance Manager" Height="399" Width="801"
+        xmlns:ui="http://schemas.modernwpf.com/2019" ResizeMode="CanMinimize"
+        ui:WindowHelper.UseModernWindowStyle="True">
+    <DockPanel LastChildFill="True">
+        <Menu x:Name="MenuControl" DockPanel.Dock="Top">
+            <MenuItem Header="New" x:Name="NewInstanceBtn"/>
+            <MenuItem Header="Kill" x:Name="KilInstanceBtn"/>
+            <TextBox x:Name="InstanceName" Width="427"/>
+            <Button Content="Select a Process" Style="{StaticResource AccentButtonStyle}" Width="119"/>
+            <Button Content="Options" Width="73"/>
+        </Menu>
+        <ListBox DockPanel.Dock="Bottom" x:Name="InstancesListBox" Width="800" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+    </DockPanel>
+</Window>
