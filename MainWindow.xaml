@@ -12,9 +12,9 @@
         <Menu x:Name="MenuControl" DockPanel.Dock="Top">
             <MenuItem Header="New" x:Name="NewInstanceBtn"/>
             <MenuItem Header="Kill" x:Name="KilInstanceBtn"/>
-            <TextBox x:Name="InstanceName" Width="427"/>
-            <Button Content="Select a Process" Style="{StaticResource AccentButtonStyle}" Width="119"/>
-            <Button Content="Options" Width="73"/>
+            <TextBox x:Name="InstanceName" Width="427" IsReadOnly="True"/>
+            <Button Content="Select a Process" Style="{StaticResource AccentButtonStyle}" Width="119" x:Name="SelectAProcessBtn" Click="SelectAProcessBtn_Click"/>
+            <Button Content="About" Width="73"/>
         </Menu>
         <ListBox DockPanel.Dock="Bottom" x:Name="InstancesListBox" Width="800" d:ItemsSource="{d:SampleData ItemCount=5}"/>
     </DockPanel>
